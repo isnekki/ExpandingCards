@@ -4,6 +4,9 @@ const NUMBER_OF_IMAGES = 5
 const onImageContainerClickHandler = (e) => {
     const current = document.querySelector('.selected')
     const clicked = e.currentTarget
+
+    if (current === clicked) return
+
     current.classList.remove('selected')
     clicked.classList.add('selected')
 }
